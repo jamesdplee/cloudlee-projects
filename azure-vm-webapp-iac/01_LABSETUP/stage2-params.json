@@ -1,0 +1,149 @@
+{
+    "addressPrefixes": {
+      "type": "Array",
+      "value": [
+        "10.200.0.0/16"
+      ]
+    },
+    "adminPassword": {
+      "type": "SecureString"
+    },
+    "adminUsername": {
+      "type": "String",
+      "value": "YOURUSERNAME"
+    },
+    "hibernationEnabled": {
+      "type": "Bool",
+      "value": false
+    },
+    "location": {
+      "type": "String",
+      "value": "australiaeast"
+    },
+    "networkInterfaceName": {
+      "type": "String",
+      "value": "webvm1-nic"
+    },
+    "networkSecurityGroupName": {
+      "type": "String",
+      "value": "web-nsg"
+    },
+    "networkSecurityGroupRules": {
+      "type": "Array",
+      "value": [
+        {
+          "name": "SSH",
+          "properties": {
+            "access": "Allow",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "22",
+            "direction": "Inbound",
+            "priority": 300,
+            "protocol": "TCP",
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*"
+          }
+        },
+        {
+          "name": "Web",
+          "properties": {
+            "access": "Allow",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "80",
+            "direction": "Inbound",
+            "priority": 200,
+            "protocol": "TCP",
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*"
+          }
+        }      
+      ]
+    },
+    "nicDeleteOption": {
+      "type": "String",
+      "value": "Detach"
+    },
+    "osDiskDeleteOption": {
+      "type": "String",
+      "value": "Delete"
+    },
+    "osDiskType": {
+      "type": "String",
+      "value": "Premium_LRS"
+    },
+    "patchMode": {
+      "type": "String",
+      "value": "AutomaticByPlatform"
+    },
+    "pipDeleteOption": {
+      "type": "String",
+      "value": "Detach"
+    },
+    "publicIpAddressName": {
+      "type": "String",
+      "value": "webvm1-ip"
+    },
+    "publicIpAddressSku": {
+      "type": "String",
+      "value": "Standard"
+    },
+    "publicIpAddressType": {
+      "type": "String",
+      "value": "Static"
+    },
+    "rebootSetting": {
+      "type": "String",
+      "value": "IfRequired"
+    },
+    "subnetName": {
+      "type": "String",
+      "value": "subnet1"
+    },
+    "subnets": {
+      "type": "Array",
+      "value": [
+        {
+          "name": "subnet1",
+          "properties": {
+            "addressPrefix": "10.200.1.0/24"
+          }
+        }
+      ]
+    },
+    "virtualMachineComputerName": {
+      "type": "String",
+      "value": "webvm1"
+    },
+    "virtualMachineName": {
+      "type": "String",
+      "value": "webvm1"
+    },
+    "virtualMachineRG": {
+      "type": "String",
+      "value": "webvm1-rg"
+    },
+    "virtualMachineSize": {
+      "type": "String",
+      "value": "Standard_B1s"
+    },
+    "virtualNetworkName": {
+      "type": "String",
+      "value": "web-vnet"
+    },
+    "virtualOsPublisher": {
+        "type": "String",
+        "value": "canonical"
+    },
+    "virtualMachineOsOffer": {
+        "type": "String",
+        "value": "0001-com-ubuntu-server-jammy"
+    },
+    "virtualMachineOsOfferSku": {
+        "type": "String",
+        "value": "22_04-lts-gen2"
+    },                
+    "virtualMachineOsVersion": {
+        "type": "String",
+        "value": "latest"
+    }    
+}
